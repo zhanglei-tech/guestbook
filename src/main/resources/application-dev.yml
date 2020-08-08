@@ -1,5 +1,5 @@
 # 项目相关配置
-prometheus:
+guestbook:
   # 名称
   name: Guestbook
   # 版本
