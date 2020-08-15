@@ -3,6 +3,7 @@ package tech.ufun.guestbook.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import tech.ufun.guestbook.entity.Message;
 import tech.ufun.guestbook.service.MessageService;
@@ -29,6 +30,7 @@ public class MessageController {
      * @return 单条数据
      */
     @GetMapping("selectOne")
+    @ResponseBody
     public Message selectOne(Long id) {
         return this.messageService.getById(id);
     }
